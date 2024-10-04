@@ -1,5 +1,5 @@
 """
-URL configuration for demo9 project.
+URL configuration for demo0 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,7 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from home import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.index, name="index_view"),
+    path('about_us', views.about_us, name="about_us"),
+    path('services', views.services, name="services"),
+    path('projects', views.projects, name="projects"),
+    path('solutions', views.solutions, name="solutions"),
+    path('partners', views.partners, name="partners"),
+    path('blog_insights', views.blog_insights, name="blog_insights"),
+    path('register', views.register, name="register"),
+    path('login', views.login, name="login"),
+    path('profile', views.profile, name="profile"),
 ]
