@@ -2,8 +2,15 @@ from django.shortcuts import render
 
 # Create your views here.
 
+import random
+
 def index(request):
-    return render(request,"home/index.html",{})
+    r = random.randint(1, 100)
+    context = {
+        "mensaje": "un mensaje XD",
+        "variable": r
+    }
+    return render(request,"home/index.html", context)
 
 def about_us(request):
     return render(request, "home/about_us.html",{})
