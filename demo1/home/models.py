@@ -9,5 +9,6 @@ class Expectation(models.Model):
     def __str__(self):
         return self.content
     
+    # Posible solución para que se cree una tabla nueva en la base de datos.
     class Meta:
-        db_table = "demo1_expectations"
+        db_table = "home1_expectations"
